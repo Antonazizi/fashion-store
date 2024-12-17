@@ -1,0 +1,267 @@
+@keyframes scroll {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+body{
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 767px) {
+    .animate-scroll {
+        animation: scroll 10s linear infinite;
+        animation-delay: 2s;
+    }
+
+    .social-medias {
+        left: auto;
+        right: 0; 
+    }
+
+    #cat-menus::-webkit-scrollbar{
+        border-radius: 8px;
+        height: 6px;
+        width: 6px;
+    }
+
+    #cat-menus::-webkit-scrollbar-track{
+        background-color: #E9E1DD;
+        border-radius: 8px;
+    }
+
+    #cat-menus::-webkit-scrollbar-thumb {
+        background-color: #968F8C;
+        border-radius: 8px;
+    }
+}
+
+@media (min-width: 767px) {
+    .animate-scroll {
+        animation: scroll 30s linear infinite;
+        animation-delay: 2s;
+    }
+}
+
+.image {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image:hover {
+  transform: scaleX(1.05);
+}
+
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 4px 5px -1px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: all 1s ease; 
+  }
+
+  .social-medias {
+    left: 0; 
+  }
+  
+  @media (max-width: 768px) {
+    .social-medias {
+      left: auto;
+      right: 0; 
+    }
+  }
+
+
+  .answer {
+    display: none;
+}
+
+.answer.hidden {
+    display: none;
+}
+
+.answer:not(.hidden) {
+    display: block;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.icon {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+    user-select: none; /* Prevent text selection on click */
+}
+
+
+/* Style the wishlist icon */
+.wishlist-icon {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Initially hide the tooltip text */
+.wishlist-tooltip-text {
+    visibility: hidden;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    top: 120%; /* Position the tooltip below the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 12px;
+    white-space: nowrap; /* Prevent long text from wrapping */
+}
+
+/* Show the tooltip on hover */
+.wishlist-icon:hover .wishlist-tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* Style the wishlist icon */
+.account-icon {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Initially hide the tooltip text */
+.account-tooltip-text {
+    visibility: hidden;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    top: 120%; /* Position the tooltip below the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 12px;
+    white-space: nowrap; /* Prevent long text from wrapping */
+}
+
+/* Show the tooltip on hover */
+.account-icon:hover .account-tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* Initially hide the tooltip text */
+.cart-tooltip-text {
+    visibility: hidden;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    top: 120%; /* Position the tooltip below the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 12px;
+    white-space: nowrap; /* Prevent long text from wrapping */
+}
+
+/* Show the tooltip on hover */
+.cart-icon:hover .cart-tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+#box {
+    transform: translateX(-100px); /* Initially off-screen */
+    opacity: 0; /* Initially hidden */
+  }
+
+
+
+#product-images::-webkit-scrollbar {
+    border-radius: 8px;
+    height: 6px;
+    width: 6px;
+}
+
+#product-images::-webkit-scrollbar-track {
+    background-color: #E9E1DD;
+    border-radius: 8px;
+}
+
+#product-images::-webkit-scrollbar-thumb {
+    background-color: #bea897b4;
+    border-radius: 8px;
+}
+
+
+#cart-images::-webkit-scrollbar {
+    border-radius: 8px;
+    height: 6px;
+    width: 6px;
+}
+
+#cart-images::-webkit-scrollbar-track {
+    background-color: #E9E1DD;
+    border-radius: 8px;
+}
+
+#cart-images::-webkit-scrollbar-thumb {
+    background-color: #bea897b4;
+    border-radius: 8px;
+}
+
+
+.scroll-change::-webkit-scrollbar {
+    border-radius: 8px;
+    height: 6px;
+    width: 6px;
+}
+
+.scroll-change::-webkit-scrollbar-track {
+    background-color: #E9E1DD;
+    border-radius: 8px;
+}
+
+.scroll-change::-webkit-scrollbar-thumb {
+    background-color: #bea897b4;
+    border-radius: 8px;
+}
+
+
+
+.loader {
+    width: 50px;
+    aspect-ratio: 2;
+    --_g: no-repeat radial-gradient(circle closest-side,#2e2e2e 90%,#1b1b1b00);
+    background: 
+      var(--_g) 0%   50%,
+      var(--_g) 50%  50%,
+      var(--_g) 100% 50%;
+    background-size: calc(100%/3) 50%;
+    animation: l3 1s infinite linear;
+  }
+  @keyframes l3 {
+      20%{background-position:0%   0%, 50%  50%,100%  50%}
+      40%{background-position:0% 100%, 50%   0%,100%  50%}
+      60%{background-position:0%  50%, 50% 100%,100%   0%}
+      80%{background-position:0%  50%, 50%  50%,100% 100%}
+  }

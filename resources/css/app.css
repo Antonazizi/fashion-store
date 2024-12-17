@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.admin-menus li{
+    padding: 8px 18px;
+}
+
+#admin-menu.open {
+    transform: translateX(0);
+}
+
+#dashboard-orders th{
+    font-weight: 500;
+    text-align: left;
+    padding: 10px 0;
+}
+
+#dashboard-orders td{
+    font-size: 12px;
+    color: rgb(91, 91, 91);
+    padding: 16px 0;
+}
+
+.admin-menus .admin-submenu li{
+    padding: 6px 0;
+    padding-left: 24px;
+    font-size: 12px;
+}
+
+
+
+.product-table tr:nth-child(odd){
+    background-color: rgb(248, 248, 248);
+}
+
+.product-table th{
+    padding: 12px 0;
+}
+.product-table td{
+    padding: 4px 0;
+}
+.product-table tr:first-child{
+    background-color: transparent;
+}
+
+.customer-table tr:nth-child(odd){
+    background-color: rgb(248, 248, 248);
+}
+
+.customer-table th{
+    padding: 12px 0;
+}
+.customer-table td{
+    padding: 8px;
+}
+.customer-table tr:first-child{
+    background-color: transparent;
+}
+
+
+
+.fas.fa-angle-down {
+    transition: transform 0.3s ease;
+}
+
+
+
+@media (max-width: 768px){
+    #dashboard-orders td{
+        padding: 16px 4px;
+    }
+    .admin-menus .admin-submenu li{
+        font-size: 14px;
+        padding: 10px 0;
+        padding-left: 24px;
+    }
+    .product-table th{
+        padding: 12px 6px;
+    }
+    .product-table td{
+        padding: 4px 6px;
+    }
+
+    .customer-table th{
+        padding: 12px 6px;
+    }
+    .customer-table td{
+        padding: 4px 6px;
+    }
+
+    .order-table th{
+        padding: 12px 10px !important;
+    }
+    .order-table td{
+        padding: 12px 10px !important;
+    }
+}
+
+@media (max-width: 1024px){
+    .product-table th{
+        padding: 12px 6px;
+    }
+    .product-table td{
+        padding: 4px 6px;
+    }
+
+    .customer-table th{
+        padding: 12px 6px;
+    }
+    .customer-table td{
+        padding: 4px 6px;
+    }
+}
+
